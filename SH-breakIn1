@@ -1,0 +1,270 @@
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+
+Fluent:Notify({ Title = "Notification", Content = "Script Executado obrigado por usar" })
+
+
+
+
+local Window = Fluent:CreateWindow({
+    Title = "SH HUB BREAK IN 1" .. Fluent.Version,
+    TabWidth = 130, Size = UDim2.fromOffset(580, 460), Theme = "Red"
+})
+
+local alvodongc
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "Nome"
+local Nzx = Instance.new("ImageButton")
+ScreenGui.Parent = game.CoreGui
+
+-- Criando o UICorner para deixar o botão redondo
+local Estetica = Instance.new("UICorner")
+Estetica.CornerRadius = UDim.new(1, 0) -- O "1" faz o botão ficar completamente redondo
+Estetica.Parent = Nzx -- Aplica o UICorner ao botão Nzx
+
+Nzx.Name = "Nzx"
+Nzx.Parent = ScreenGui
+Nzx.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Nzx.Position = UDim2.new(0.799450576, 0, 0.278925627, 0)
+Nzx.Size = UDim2.new(0, 50, 0, 50)
+Nzx.Visible = true
+Nzx.Draggable = true     
+Nzx.Active = true     
+Nzx.Selectable = true
+Nzx.Image = "rbxassetid://13915834710" -- Id da imagem aqui
+
+-- Função para alternar a visibilidade de "alvodongc"
+for i, v in pairs(game.CoreGui:GetDescendants()) do
+    if v.Name == "CanvasGroup" then
+        alvodongc = v.Parent
+    end
+end
+
+local function FVGE_fake_script()
+    Nzx.MouseButton1Up:Connect(function()
+        task.wait()
+        if not toggle then
+            toggle = true
+            alvodongc.Visible = true
+        else
+            toggle = false
+            alvodongc.Visible = false
+        end
+    end)
+end
+coroutine.wrap(FVGE_fake_script)()
+
+
+
+local MainTab = Window:AddTab({ Title = "Itens break in" })
+
+MainTab:AddButton({
+    Title = "Pegar maçã",
+    Callback = function()
+        print("Botão clicado!")
+       game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Apple") 
+    end})
+    
+    MainTab:AddButton({
+    Title = "Pegar cookie",
+    Callback = function()
+        print("Botão clicado!")
+       game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Cookie") 
+    end})
+    
+    MainTab:AddButton({
+    Title = "Pegar pizza",
+    Callback = function()
+        print("Botão clicado!")
+      game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Pizza3")  
+    end})
+    
+    MainTab:AddButton({
+    Title = "Pegar batata Chips (pode pegar quanto vc quiser)",
+    Callback = function()
+        print("Botão clicado!")
+       game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Chips") 
+    end})
+    
+    MainTab:AddButton({
+    Title = "Pegar Coca cola",
+    Callback = function()
+        print("Botão clicado!")
+       game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("BloxyCola") 
+    end})
+    
+    MainTab:AddButton({
+    Title = "Pegar espada",
+    Callback = function()
+        print("Botão clicado!")
+       game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("LinkedSword") 
+    end})
+   
+   MainTab:AddButton({
+    Title = "Pegar kit médico",
+    Callback = function()
+        print("Botão clicado!")
+       game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("MedKit") 
+    end})
+    
+    MainTab:AddButton({
+    Title = "Pegar cura",
+    Callback = function()
+        print("Botão clicado!")
+       game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Cure") 
+    end})
+    
+   MainTab:AddButton({
+    Title = "Pegar taco de beisebol",
+    Callback = function()
+        print("Botão clicado!")
+       game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Bat") 
+    end})
+    
+    MainTab:AddButton({
+    Title = "Pegar tábuas",
+    Callback = function()
+        print("Botão clicado!")
+       game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Plank") 
+    end})
+    
+    
+    MainTab:AddButton({
+    Title = "Pegar chave",
+    Callback = function()
+        print("Botão clicado!")
+       game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Key") 
+    end})
+    
+    MainTab:AddButton({
+    Title = "Pegar pirulito",
+    Callback = function()
+        print("Botão clicado!")
+       game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Lollipop") 
+    end})
+    
+    MainTab:AddButton({
+    Title = "Pegar martelo",
+    Callback = function()
+        print("Botão clicado!")
+       game:GetService("ReplicatedStorage").RemoteEvents.BasementWeapon:FireServer(true, "Hammer")
+    end})
+    
+    MainTab:AddButton({
+    Title = "Pegar urso",
+    Callback = function()
+        print("Botão clicado!")
+       game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("TeddyBloxpin") 
+    end})
+    
+    
+    local MainTab = Window:AddTab({ Title = "Modos" })
+    
+    MainTab:AddButton({
+    Title = "virar da polícia",
+    Callback = function()
+        print("Botão clicado!")
+       game:GetService("ReplicatedStorage").RemoteEvents.OutsideRole:FireServer("Gun", true)
+    end})
+    
+    MainTab:AddButton({
+    Title = "virar da swat",
+    Callback = function()
+        print("Botão clicado!")
+       game:GetService("ReplicatedStorage").RemoteEvents.OutsideRole:FireServer("SwatGun", true)
+    end})
+    
+    
+    local MainTab = Window:AddTab({ Title = "Teleportes" })
+    
+    MainTab:AddButton({
+    Title = "porão",
+    Callback = function()
+        print("Botão clicado!")
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(71, -15, -163)
+    end})
+    
+    MainTab:AddButton({
+    Title = "casa",
+    Callback = function()
+        print("Botão clicado!")
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-36, 3, -200)
+    end})
+    
+    MainTab:AddButton({
+    Title = "Esconderijo",
+    Callback = function()
+        print("Botão clicado!")
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-42.86, 6.43, -222.01) 
+    end})
+    
+    MainTab:AddButton({
+    Title = "Sótão",
+    Callback = function()
+        print("Botão clicado!")
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-16, 35, -220)
+    end})
+    
+    MainTab:AddButton({
+    Title = "Loja",
+    Callback = function()
+        print("Botão clicado!")
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-422, 3, -121)
+    end})
+    
+    MainTab:AddButton({
+    Title = "Esgoto",
+    Callback = function()
+        print("Botão clicado!")
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(129, 3, -125)
+    end})
+    
+    MainTab:AddButton({
+    Title = "Chefão",
+    Callback = function()
+        print("Botão clicado!")
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-39, -287, -1480)
+    end})
+    
+    
+        local MainTab = Window:AddTab({ Title = "Skipar" })
+        
+        MainTab:AddButton({
+    Title = "Matar inimigos (Beta)",
+    Callback = function()
+        print("Botão clicado!")
+       for _, v in pairs(game.Workspace.BadGuys:GetChildren()) do
+        for _ = 1, 50 do
+            game:GetService("ReplicatedStorage").RemoteEvents.HitBadguy:FireServer(v, 996)
+    end})
+    
+    MainTab:AddButton({
+    Title = "Abrir o cofre",
+    Callback = function()
+        print("Botão clicado!")
+       game.ReplicatedStorage.RemoteEvents.Safe:FireServer(game:GetService("Workspace").CodeNote.SurfaceGui.TextLabel.Text)
+    end})
+    
+    MainTab:AddButton({
+    Title = "Amizade com o gato",
+    Callback = function()
+        print("Botão clicado!")
+       game:GetService("ReplicatedStorage").RemoteEvents.Cattery:FireServer()
+    end})
+    
+    MainTab:AddButton({
+    Title = "Soltar a ferramenta",
+    Callback = function()
+        print("Botão clicado!")
+       loadstring(game:HttpGet("https://pastebin.com/raw/ZYXmS4Sb"))()
+    end})
+    MainTab:AddButton({
+    Title = "Cura (Ative o amigo do gato)",
+    Callback = function()
+        print("Botão clicado!")
+       rodando = not rodando  -- Alterna entre iniciar e parar
+
+    while rodando do
+        game:GetService("ReplicatedStorage").RemoteEvents.Energy:FireServer("Cat")
+        wait()  -- Pequeno delay para evitar travamento
+    end})
+    
